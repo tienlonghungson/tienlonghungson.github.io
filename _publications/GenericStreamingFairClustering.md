@@ -3,7 +3,7 @@ title: "A Generic Framework for Fair Consensus Clustering in Streams"
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2026
+date: 2026-02
 venue: 'AAMAS 2026 (Oral Presentation)'
 paperurl: 'https://arxiv.org/abs/2602.11500'
 ---

@@ -3,7 +3,7 @@ title: "Generalizing fair clustering to multiple groups: algorithms and applicat
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2026
+date: 2026-03
 venue: 'AAAI 2026 (Oral Presentation)'
 paperurl: 'https://arxiv.org/abs/2511.11539'
 ---

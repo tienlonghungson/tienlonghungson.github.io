@@ -3,7 +3,7 @@ title: "An efficient exact method with polynomial time-complexity to achieve k-s
 collection: publications
 category: manuscript 
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2024
+date: 2024-11-01
 venue: 'Journal of Network and Computer Applications'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S1084804524001620'
 ---

@@ -3,7 +3,7 @@ title: "Run Length Limited de Bruijn Sequences for Quantum Communications"
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2022
+date: 2022-06
 venue: 'ISIT 2022'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/9834795'
 ---

@@ -3,7 +3,7 @@ title: "Verification-free approaches to efficient locally densest subgraph disco
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2023
+date: 2023-04
 venue: 'ICDE 2023'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10184510'
 ---
