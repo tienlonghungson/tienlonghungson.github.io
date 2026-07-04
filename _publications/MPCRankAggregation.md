@@ -1,7 +1,7 @@
 ---
 title: "A Scalable and Unified Framework to Weighted Rank Aggregation"
 collection: publications
-# permalink: /publication/2009-10-01-paper-title-number-1
+permalink: /publication/MPCRankAggregation
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-04-20
 venue: 'ICALP 2026'
