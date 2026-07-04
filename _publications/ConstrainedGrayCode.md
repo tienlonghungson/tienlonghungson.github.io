@@ -3,7 +3,7 @@ title: "Weight Constrained Run Length Limited Gray Codes"
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2025-06
+date: 2025-06-01
 venue: 'ISIT 2025'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11195581'
 ---

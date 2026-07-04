@@ -3,7 +3,7 @@ title: "Matching the statements: A simple and accurate model for key point analy
 collection: publications
 category: conference
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2021-11
+date: 2021-11-01
 venue: 'Proceedings of the 8th Workshop on Argument Mining'
 paperurl: 'https://aclanthology.org/2021.argmining-1.17/'
 ---

@@ -3,7 +3,7 @@ title: "Towards Fair Representation: Clustering and Consensus"
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2025-6
+date: 2025-06-01
 venue: 'COLT 2025'
 paperurl: 'https://arxiv.org/abs/2506.08673'
 ---

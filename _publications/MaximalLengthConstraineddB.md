@@ -3,7 +3,7 @@ title: "Maximal Length Constrained de Bruijn Sequences"
 collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2023-06
+date: 2023-06-01
 venue: 'ISIT 2023'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10206819'
 ---
