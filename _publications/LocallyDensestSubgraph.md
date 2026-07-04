@@ -1,0 +1,10 @@
+---
+title: "Verification-free approaches to efficient locally densest subgraph discovery"
+collection: publications
+category: conferences
+# excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+date: 2023
+venue: 'ICDE 2023'
+paperurl: 'https://ieeexplore.ieee.org/abstract/document/10184510'
+---
+Finding dense subgraphs from a large graph is a fundamental graph mining task with many applications. The notion is recently formulated of locally densest subgraph (LDS) is recently formulated to identify multiple dense subgraphs that cover different regions of a large graph. Informally, an LDS is a subgraph with the highest density in its local region. The state-of-the-art algorithm for computing top-k LDSes with the highest densities is LDS. It iteratively computes the densest subgraph and removes it from the graph, where all the computed densest subgraphs form the candidates of LDSes. Then, each candidate is verified through a costly maximum flow computation. Although advanced pruning techniques are proposed in LDS, the verification step is still time consuming especially for not-so-small k values. In this paper, we aim to improve the efficiency of finding top-k LDSes by designing verification-free approaches. Our algorithms are based on our observation that the set of maximal $\lambda$-compact subgraphs for all possible $\lambda$ values form a hierarchical structure, and LDSes are simply leaves in the hierarchical structure. Thus, we propose a divide-and-conquer algorithm LDS-DC as well as an optimized algorithm LDS-Opt to efficiently identify top-k LDSes without constructing the entire hierarchical structure. Both of our algorithms have lower time complexities than LDS. Extensive empirical studies on real graphs show that our optimized algorithm LDS-Opt outperforms LDS for all k values, and the improvement is up-to several orders of magnitude.
