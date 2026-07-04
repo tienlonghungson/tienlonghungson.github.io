@@ -1,7 +1,7 @@
 ---
 title: "An efficient exact method with polynomial time-complexity to achieve k-strong barrier coverage in heterogeneous wireless multimedia sensor networks"
 collection: publications
-category: manuscript 
+category: manuscripts 
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-11-01
 venue: 'Journal of Network and Computer Applications'

@@ -1,7 +1,7 @@
 ---
 title: "Maximum length RLL sequences in de Bruijn graph"
 collection: publications
-category: manuscript
+category: manuscripts
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-03-01
 venue: 'Preprint'
