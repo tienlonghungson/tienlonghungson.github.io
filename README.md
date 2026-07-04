@@ -1,4 +1,13 @@
-# Academic Pages
+# About me
+I am a third year Ph.D. student at Pennsylvania State University. I am currently working under the supervision of [Prof. Debarati Das](https://sites.google.com/view/debaratidas/home). My interest is Theoretical Computer Science in general. In particular, I am interested in Approximation algorithms (for strings and clusterings), and Coding Theory. I earned my B.S. degree in Computer Science (honors program) from Hanoi University of Science and Technology. I had two years working as a research engineer at National University of Singapore, supervised by [Prof. Yeow Meng Chee](https://ymchee66.github.io/home/) and Dr. Khu Vu.
+
+Beside research, I am also interested in programming and math contests. When I was an undergraduate student, I participated in many competitions in mathematics and programming (the International Collegiate Programming Contest). I was fortunate enough to get good results in those contests.
+
+If you have any question about my information, please contact me via my email: longnguyen@psu.edu.
+
+**Site is under heavy construction**
+
+<!-- # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
 ![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
@@ -98,4 +107,4 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+</div> -->
