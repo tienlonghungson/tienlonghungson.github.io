@@ -1,7 +1,7 @@
 ---
 title: "Matching the statements: A simple and accurate model for key point analysis"
 collection: publications
-category: conference
+category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2021-11-01
 venue: 'Proceedings of the 8th Workshop on Argument Mining'
