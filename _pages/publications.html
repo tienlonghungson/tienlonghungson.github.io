@@ -11,31 +11,103 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign preprints = site.publications | where_exp: "item", "item.category == 'manuscripts' and item.venue == 'Preprint'" | sort: "date" | reverse %}
-{% assign published = site.publications | where_exp: "item", "item.category != 'manuscripts' or item.venue != 'Preprint'" | sort: "date" | reverse %}
+<style>
+  .pub-year {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+  }
 
-{% if preprints.size > 0 %}
+  .pub-year__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-year__header h3 {
+    margin: 0;
+  }
+
+  .pub-year__year {
+    color: #777;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
+  .pub-year__section-title {
+    margin: 1rem 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+</style>
+
+{% assign all_publications = site.publications | sort: "date" | reverse %}
+
+{% if all_publications.size > 0 %}
   <h2>Preprints</h2><hr />
-  {% for post in preprints %}
-    {% include archive-single.html %}
+  {% for post in all_publications %}
+    {% if post.category == 'manuscripts' and post.venue == 'Preprint' %}
+      {% include archive-single.html %}
+    {% endif %}
   {% endfor %}
 {% endif %}
 
-{% if published.size > 0 %}
+{%- capture published_years_text -%}
+{%- for post in all_publications -%}
+{%- unless post.category == 'manuscripts' and post.venue == 'Preprint' -%}
+{{ post.date | date: "%Y" }}|
+{%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+{% assign published_years = published_years_text | split: "|" | compact | uniq | sort | reverse %}
+
+{% if published_years.size > 0 %}
   <h2>Publications</h2><hr />
-  {% assign published_by_year = published | group_by_exp: "item", "item.date | date: '%Y'" | reverse %}
-  {% for year_group in published_by_year %}
-    {% assign conference_pubs = year_group.items | where: "category", "conferences" | sort: "date" | reverse %}
-    {% assign journal_pubs = year_group.items | where: "category", "manuscripts" | sort: "date" | reverse %}
-    {% if conference_pubs.size > 0 or journal_pubs.size > 0 %}
-      <h3>{{ year_group.name }}</h3>
-      {% for post in conference_pubs %}
-        {% include archive-single.html %}
-      {% endfor %}
-      {% for post in journal_pubs %}
-        {% include archive-single.html %}
+  {% for year in published_years %}
+    <div class="pub-year">
+      <div class="pub-year__header">
+        <h3>Conference Articles</h3>
+        <div class="pub-year__year">{{ year }}</div>
+      </div>
+    {% assign conference_count = 0 %}
+    {% assign journal_count = 0 %}
+    {% for post in all_publications %}
+      {% assign post_year = post.date | date: "%Y" %}
+      {% if post_year == year %}
+        {% if post.category == 'conferences' %}
+          {% assign conference_count = conference_count | plus: 1 %}
+        {% endif %}
+        {% if post.category == 'manuscripts' and post.venue != 'Preprint' %}
+          {% assign journal_count = journal_count | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if conference_count > 0 %}
+      {% for post in all_publications %}
+        {% assign post_year = post.date | date: "%Y" %}
+        {% if post_year == year %}
+          {% if post.category == 'conferences' %}
+            {% include archive-single.html %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
     {% endif %}
+
+    {% if journal_count > 0 %}
+      <div class="pub-year__section-title">Journal Articles</div>
+      {% for post in all_publications %}
+        {% assign post_year = post.date | date: "%Y" %}
+        {% if post_year == year %}
+          {% if post.category == 'manuscripts' and post.venue != 'Preprint' %}
+            {% include archive-single.html %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    </div>
   {% endfor %}
 {% endif %}
 
