@@ -1,0 +1,58 @@
+{% assign publication = include.item %}
+{% assign publication_authors = publication.authors %}
+{% assign publication_paperurl = publication.paperurl | strip %}
+{% assign publication_arxiv_url = publication.arxiv_url | strip %}
+{% assign publication_comments = publication.comments | strip %}
+{% assign publication_personal_comments = publication.personal_comments | strip %}
+
+<div class="publication-meta">
+  {% if publication_authors != '' and publication_authors != true %}
+    <p class="publication-authors">
+      {% for author_key in publication_authors %}
+        {% assign author_info = site.data.authors[author_key] %}
+        {% if author_info and author_info.uri %}
+          <a href="{{ author_info.uri }}" target="_blank" rel="noopener noreferrer">{{ author_info.name | default: author_key }}</a>
+        {% else %}
+          {{ author_key }}
+        {% endif %}
+        {% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {% if publication.venue and publication.venue != 'Preprint' %}
+    <p class="publication-venue">{{ publication.venue }}</p>
+  {% endif %}
+
+  {% if publication.content %}
+    <details class="publication-abstract">
+      <summary>[Abstract]</summary>
+      <div class="publication-abstract__body">{{ publication.content }}</div>
+    </details>
+  {% endif %}
+
+  {% if publication_paperurl != '' or publication_arxiv_url != '' %}
+    <div class="publication-links">
+      {% if publication_paperurl != '' %}
+        <a class="publication-link publication-link--doi" href="{{ publication_paperurl }}" target="_blank" rel="noopener noreferrer" title="Paper / DOI">
+          <i class="fa fa-link" aria-hidden="true"></i>
+          <span>DOI</span>
+        </a>
+      {% endif %}
+      {% if publication_arxiv_url != '' %}
+        <a class="publication-link publication-link--arxiv" href="{{ publication_arxiv_url }}" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          <span>arXiv</span>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if publication_comments != '' and publication_comments != true %}
+    <p class="publication-notes"><strong>Comments:</strong> {{ publication_comments | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endif %}
+
+  {% if publication_personal_comments != '' and publication_personal_comments != true %}
+    <p class="publication-notes publication-notes--personal"><strong>Personal comments:</strong> {{ publication_personal_comments | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endif %}
+</div>

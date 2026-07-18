@@ -4,8 +4,16 @@ collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-03-01
-venue: 'AAAI 2026 (Oral Presentation)'
-paperurl: 'https://arxiv.org/abs/2511.11539'
+venue: '40th Annual AAAI Conference on Artificial Intelligence, AAAI 2026 (Oral Presentation)'
+paperurl: 
+authors:
+    - Diptarka Chakraborty
+    - Kushagra Chatterjee
+    - Debarati Das
+    - Tien-Long Nguyen
+arxiv_url: 'https://arxiv.org/abs/2511.11539'
+comments: ""
+personal_comments: ""
 ---
 Clustering is a fundamental task in machine learning and data analysis, but it frequently fails to provide fair representation for various marginalized communities defined by multiple protected attributes -- a shortcoming often caused by biases in the training data. As a result, there is a growing need to enhance the fairness of clustering outcomes, ideally by making minimal modifications, possibly as a post-processing step after conventional clustering. A recent work initiated the study of \emph{closest fair clustering}, though in a restricted scenario where data points belong to only two groups. In practice, however, data points are typically characterized by many groups, reflecting diverse protected attributes such as age, ethnicity, gender, etc.
 

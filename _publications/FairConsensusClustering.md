@@ -4,8 +4,17 @@ collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2025-06-01
-venue: 'COLT 2025'
-paperurl: 'https://arxiv.org/abs/2506.08673'
+venue: '38th Annual Conference on Learning Theory, COLT 2025'
+paperurl: 
+authors: 
+    - Diptarka Chakraborty
+    - Kushagra Chatterjee
+    - Debarati Das
+    - Tien-Long Nguyen
+    - Romina Nobahari
+arxiv_url: 'https://arxiv.org/abs/2506.08673'
+comments: ""
+personal_comments: ""
 ---
 Consensus clustering, a fundamental task in machine learning and data analysis, aims to aggregate multiple input clusterings of a dataset, potentially based on different non-sensitive attributes, into a single clustering that best represents the collective structure of the data. In this work, we study this fundamental problem through the lens of fair clustering, as introduced by Chierichetti et al. [NeurIPS'17], which incorporates the disparate impact doctrine to ensure proportional representation of each protected group in the dataset within every cluster. Our objective is to find a consensus clustering that is not only representative but also fair with respect to specific protected attributes. To the best of our knowledge, we are the first to address this problem and provide a constant-factor approximation.
 

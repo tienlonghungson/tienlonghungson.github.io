@@ -101,4 +101,87 @@ $vimeo-color                : #1ab7ea;
 $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
+
+/* ==========================================================================
+    Publications
+    ========================================================================== */
+
+.publication-meta {
+   margin: 0.35rem 0 0.75rem;
+}
+
+.publication-authors {
+   margin: 0;
+   color: #c04fa8;
+}
+
+.publication-venue {
+   margin: 0.15rem 0 0;
+   color: #555;
+}
+
+.publication-abstract {
+   margin: 0.6rem 0 0.75rem;
+}
+
+.publication-abstract summary {
+   cursor: pointer;
+   display: inline-block;
+   color: #1a73b8;
+   font-weight: 600;
+   list-style: none;
+}
+
+.publication-abstract summary::-webkit-details-marker {
+   display: none;
+}
+
+.publication-abstract__body {
+   margin-top: 0.5rem;
+}
+
+.publication-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   margin: 0.4rem 0 0.6rem;
+}
+
+.publication-link {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.35rem;
+   padding: 0.2rem 0.55rem;
+   border: 1px solid #d7d7d7;
+   border-radius: 999px;
+   font-size: 0.85rem;
+   line-height: 1;
+   text-decoration: none;
+}
+
+.publication-link:hover {
+   text-decoration: none;
+}
+
+.publication-notes {
+   margin: 0.35rem 0 0;
+   font-size: 0.95rem;
+}
+
+.publication-notes--personal {
+   font-style: italic;
+}
+
+.publication-note {
+   margin: 0 0 1rem;
+   color: #666;
+   font-style: italic;
+}
+
+.publication-title-marker {
+   margin-left: 0.2rem;
+   color: #666;
+   font-size: 0.8em;
+   vertical-align: super;
+}
    

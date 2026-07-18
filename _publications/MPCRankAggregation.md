@@ -4,8 +4,15 @@ collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-04-20
-venue: 'ICALP 2026'
-paperurl: 'https://arxiv.org/html/2605.09653v1'
+venue: '53rd EATCS International Colloquium on Automata, Languages, and Programming, ICALP 2026'
+paperurl: ''
+authors:
+    - Amir Carmel
+    - Debarati Das
+    - Tien-Long Nguyen
+arxiv_url: "https://arxiv.org/html/2605.09653v1"
+comments: ""
+personal_comments: ""
 ---
  The rank aggregation problem, seeks to combine multiple rank orderings of the same set of candidates into a single consensus ordering. Such problems arise in diverse domains, including web search, employment, college admissions, and voting. 
 In this work we focus on the 1-median objective: given a set of $m$ rankings over $[n]$, the goal is to compute a ranking that minimizes the sum of its distances to all input rankings.

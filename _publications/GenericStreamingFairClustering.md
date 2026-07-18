@@ -4,8 +4,16 @@ collection: publications
 category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-02-01
-venue: 'AAMAS 2026 (Oral Presentation)'
-paperurl: 'https://arxiv.org/abs/2602.11500'
+venue: '25th International Conference on Autonomous Agents and Multiagent Systems, AAMAS 2026 (Oral Presentation)'
+paperurl: 
+authors:
+    - Diptarka Chakraborty
+    - Kushagra Chatterjee
+    - Debarati Das
+    - Tien-Long Nguyen
+arxiv_url: "https://arxiv.org/abs/2602.11500"
+comments: ""
+personal_comments: ""
 ---
 Consensus clustering seeks to combine multiple clusterings of the same dataset, potentially derived by considering various non-sensitive attributes by different agents in a multi-agent environment, into a single partitioning that best reflects the overall structure of the underlying dataset. Recent work by Chakraborty et al. [COLT’25] introduced a fair variant under proportionate fairness and obtained a constant-factor approximation by naively selecting the best closest fair input clustering; however, their offline approach requires storing all input clusterings, which is prohibitively expensive for most large-scale applications.
 
