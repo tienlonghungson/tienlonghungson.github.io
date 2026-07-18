@@ -11,24 +11,31 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
+{% assign preprints = site.publications | where_exp: "item", "item.category == 'manuscripts' and item.venue == 'Preprint'" | sort: "date" | reverse %}
+{% assign published = site.publications | where_exp: "item", "item.category != 'manuscripts' or item.venue != 'Preprint'" | sort: "date" | reverse %}
+
+{% if preprints.size > 0 %}
+  <h2>Preprints</h2><hr />
+  {% for post in preprints %}
     {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
+
+{% if published.size > 0 %}
+  <h2>Publications</h2><hr />
+  {% assign published_by_year = published | group_by_exp: "item", "item.date | date: '%Y'" | reverse %}
+  {% for year_group in published_by_year %}
+    {% assign conference_pubs = year_group.items | where: "category", "conferences" | sort: "date" | reverse %}
+    {% assign journal_pubs = year_group.items | where: "category", "manuscripts" | sort: "date" | reverse %}
+    {% if conference_pubs.size > 0 or journal_pubs.size > 0 %}
+      <h3>{{ year_group.name }}</h3>
+      {% for post in conference_pubs %}
+        {% include archive-single.html %}
+      {% endfor %}
+      {% for post in journal_pubs %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% endif %}
   {% endfor %}
 {% endif %}
 
