@@ -11,6 +11,7 @@ authors:
     - Kushagra Chatterjee
     - Debarati Das
     - Tien-Long Nguyen
+paperurl: "https://ojs.aaai.org/index.php/AAAI/article/view/39077"
 arxiv_url: 'https://arxiv.org/abs/2511.11539'
 comments: ""
 personal_comments: ""

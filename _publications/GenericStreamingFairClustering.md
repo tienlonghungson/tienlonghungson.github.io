@@ -5,7 +5,7 @@ category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-02-01
 venue: '25th International Conference on Autonomous Agents and Multiagent Systems, AAMAS 2026 (Oral Presentation)'
-paperurl: 
+paperurl: "https://dl.acm.org/doi/10.65109/TFHZ1924"
 authors:
     - Diptarka Chakraborty
     - Kushagra Chatterjee

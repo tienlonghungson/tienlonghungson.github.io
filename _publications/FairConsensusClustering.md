@@ -5,7 +5,7 @@ category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2025-06-01
 venue: '38th Annual Conference on Learning Theory, COLT 2025'
-paperurl: 
+paperurl: "https://proceedings.mlr.press/v291/chakraborty25a.html"
 authors: 
     - Diptarka Chakraborty
     - Kushagra Chatterjee
