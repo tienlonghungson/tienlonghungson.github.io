@@ -10,7 +10,8 @@ I am a third year Ph.D. student at Pennsylvania State University. I am currently
 If you have any question about my information, please contact me via my email: longnguyen@psu.edu.
 
 ## News
-- **[July 2026]** I'll be attending ICALP 2026 in London, presenting my paper [A Scalable and Unified Framework to Weighted Rank Aggregation
+- **[July 2026]** I attended DIMACS's [Workshop on Algebraic Techniques in Fine-Grained Complexity](https://dimacs.rutgers.edu/dimacsevents/workshop-details/dimacs-workshop-on-algebraic-techniques-in-fine-gr) and [Workshop on Fine-Grained Complexity of String Problems](https://dimacs.rutgers.edu/dimacsevents/workshop-details/dimacs-workshop-on-fine-grained-complexity-of-stri).
+- **[July 2026]** I attended ICALP 2026 in London, presenting my paper [A Scalable and Unified Framework to Weighted Rank Aggregation
 ](https://arxiv.org/abs/2605.09653v1).
 - **[April 2026]** Our paper [A Scalable and Unified Framework to Weighted Rank Aggregation
 ](https://arxiv.org/abs/2605.09653v1) got accepted to [ICALP 2026](https://icalppodcspaa2026.cs.rhul.ac.uk/).
