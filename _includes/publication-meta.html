@@ -2,6 +2,8 @@
 {% assign publication_authors = publication.authors %}
 {% assign publication_paperurl = publication.paperurl | strip %}
 {% assign publication_arxiv_url = publication.arxiv_url | strip %}
+{% assign publication_talks_by_me = publication.talks_by_me %}
+{% assign publication_talks_by_coauthors = publication.talks_by_coauthors %}
 {% assign publication_comments = publication.comments | strip %}
 {% assign publication_personal_comments = publication.personal_comments | strip %}
 
@@ -31,7 +33,7 @@
     </details>
   {% endif %}
 
-  {% if publication_paperurl != '' or publication_arxiv_url != '' %}
+  {% if publication_paperurl != '' or publication_arxiv_url != '' or publication_talks_by_me.size > 0 or publication_talks_by_coauthors.size > 0 %}
     <div class="publication-links">
       {% if publication_paperurl != '' %}
         <a class="publication-link publication-link--doi" href="{{ publication_paperurl }}" target="_blank" rel="noopener noreferrer" title="Paper / DOI">
@@ -44,6 +46,12 @@
           <i class="fa fa-file-text-o" aria-hidden="true"></i>
           <span>arXiv</span>
         </a>
+      {% endif %}
+      {% if publication_talks_by_me.size > 0 %}
+        <span class="publication-link-group publication-link-group--me">[ {% for talk in publication_talks_by_me %}<a class="publication-link publication-link--talk" href="{{ talk[1] | escape }}" target="_blank" rel="noopener noreferrer">{{ talk[0] | escape }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %} ]</span>
+      {% endif %}
+      {% if publication_talks_by_coauthors.size > 0 %}
+        <span class="publication-link-group publication-link-group--coauthors">[ {% for talk in publication_talks_by_coauthors %}<a class="publication-link publication-link--talk" href="{{ talk[1] | escape }}" target="_blank" rel="noopener noreferrer">{{ talk[0] | escape }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %} ]</span>
       {% endif %}
     </div>
   {% endif %}

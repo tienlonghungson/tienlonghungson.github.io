@@ -20,6 +20,20 @@ See more info at https://academicpages.github.io/
 Additional tutorials for working with the Academic Pages template can be found at the following sites:
 - https://jayrobwilliams.com/posts/2020/06/academic-website/
 
+### Publication talk links
+
+Add optional `talks_by_me` and `talks_by_coauthors` mappings to a publication's YAML front matter. Each mapping key is the text shown on the publication page, and its value is the link opened when the text is clicked:
+
+```yaml
+talks_by_me:
+    "Talk at ITCS": "https://example.com/itcs-slides"
+    "Recording @ ITCS": "https://example.com/itcs-recording"
+talks_by_coauthors:
+    "Talk by Amir at ITCS": "https://example.com/amir-slides"
+```
+
+The links appear alongside the paper and arXiv links when those fields are present.
+
 ## Running locally
 
 When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:

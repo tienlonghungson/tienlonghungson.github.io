@@ -13,6 +13,8 @@ authors:
 arxiv_url: "https://arxiv.org/html/2605.09653v1"
 comments: ""
 personal_comments: ""
+talks_by_me:
+  "Slides @ ICALP 2026": "/files/slides/ICALP 2026 - A Scalable and Unified Framework to Weighted Rank Aggregation.pptx"
 ---
  The rank aggregation problem, seeks to combine multiple rank orderings of the same set of candidates into a single consensus ordering. Such problems arise in diverse domains, including web search, employment, college admissions, and voting. 
 In this work we focus on the 1-median objective: given a set of $m$ rankings over $[n]$, the goal is to compute a ranking that minimizes the sum of its distances to all input rankings.

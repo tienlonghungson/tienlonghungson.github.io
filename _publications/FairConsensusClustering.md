@@ -15,6 +15,9 @@ authors:
 arxiv_url: 'https://arxiv.org/abs/2506.08673'
 comments: ""
 personal_comments: ""
+talks_by_coauthors:
+  "Slide by Kushagra @ COLT 2026": "/files/slidesbycoauthors/COLT 2026 slides.pdf"
+  "Recording Kushagra @ COLT 2026": "https://www.youtube.com/watch?v=kvJ2unCwtHA&t=890s"
 ---
 Consensus clustering, a fundamental task in machine learning and data analysis, aims to aggregate multiple input clusterings of a dataset, potentially based on different non-sensitive attributes, into a single clustering that best represents the collective structure of the data. In this work, we study this fundamental problem through the lens of fair clustering, as introduced by Chierichetti et al. [NeurIPS'17], which incorporates the disparate impact doctrine to ensure proportional representation of each protected group in the dataset within every cluster. Our objective is to find a consensus clustering that is not only representative but also fair with respect to specific protected attributes. To the best of our knowledge, we are the first to address this problem and provide a constant-factor approximation.
 

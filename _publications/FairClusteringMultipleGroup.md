@@ -15,6 +15,8 @@ paperurl: "https://ojs.aaai.org/index.php/AAAI/article/view/39077"
 arxiv_url: 'https://arxiv.org/abs/2511.11539'
 comments: ""
 personal_comments: ""
+talks_by_coauthors:
+  "Video/Poster/Slide Kushagra @ AAAI 2026": "https://underline.io/lecture/142989-generalizing-fair-clustering-to-multiple-groups-algorithms-and-applications"
 ---
 Clustering is a fundamental task in machine learning and data analysis, but it frequently fails to provide fair representation for various marginalized communities defined by multiple protected attributes -- a shortcoming often caused by biases in the training data. As a result, there is a growing need to enhance the fairness of clustering outcomes, ideally by making minimal modifications, possibly as a post-processing step after conventional clustering. A recent work initiated the study of \emph{closest fair clustering}, though in a restricted scenario where data points belong to only two groups. In practice, however, data points are typically characterized by many groups, reflecting diverse protected attributes such as age, ethnicity, gender, etc.
 

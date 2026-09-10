@@ -151,12 +151,18 @@ $xing-color                 : #006567;
    display: inline-flex;
    align-items: center;
    gap: 0.35rem;
+   min-width: 0;
    padding: 0.2rem 0.55rem;
    border: 1px solid #d7d7d7;
    border-radius: 999px;
    font-size: 0.85rem;
-   line-height: 1;
+   line-height: 1.25;
    text-decoration: none;
+   overflow-wrap: anywhere;
+}
+
+.publication-link-group {
+   display: inline;
 }
 
 .publication-link:hover {
