@@ -57,10 +57,16 @@
   {% endif %}
 
   {% if publication_comments != '' and publication_comments != true %}
-    <p class="publication-notes"><strong>Comments:</strong> {{ publication_comments | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    <details class="publication-notes publication-notes--comments">
+      <summary>+ Comments</summary>
+      <div class="publication-notes__body">{{ publication_comments | markdownify }}</div>
+    </details>
   {% endif %}
 
   {% if publication_personal_comments != '' and publication_personal_comments != true %}
-    <p class="publication-notes publication-notes--personal"><strong>Personal comments:</strong> {{ publication_personal_comments | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    <details class="publication-notes publication-notes--personal">
+      <summary>+ Personal Comments</summary>
+      <div class="publication-notes__body">{{ publication_personal_comments | markdownify }}</div>
+    </details>
   {% endif %}
 </div>

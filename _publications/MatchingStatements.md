@@ -13,7 +13,7 @@ authors:
     - Khanh Doan
 arxiv_url: ""
 comments: ""
-personal_comments: ""
+personal_comments: "My first paper, cheers !!!"
 contribution_ordering: true
 contribution_marker: "*"
 ---

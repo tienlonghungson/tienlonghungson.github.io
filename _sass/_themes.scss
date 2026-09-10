@@ -174,6 +174,21 @@ $xing-color                 : #006567;
    font-size: 0.95rem;
 }
 
+.publication-notes summary {
+   cursor: pointer;
+   color: #1a73b8;
+   font-weight: 600;
+   list-style: none;
+}
+
+.publication-notes summary::-webkit-details-marker {
+   display: none;
+}
+
+.publication-notes__body {
+   margin-top: 0.35rem;
+}
+
 .publication-notes--personal {
    font-style: italic;
 }

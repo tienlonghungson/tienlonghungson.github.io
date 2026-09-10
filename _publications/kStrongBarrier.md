@@ -14,7 +14,7 @@ authors:
     - Trinh Van Chien
 arxiv_url: ""
 comments: ""
-personal_comments: ""
+personal_comments: "My first work with my undergraduate advisor, Prof. Huynh Thi Thanh Binh, cheers !!!. This paper was published in 2024, but I started working on it before all other works."
 contribution_ordering: true
 contribution_marker: "*"
 ---

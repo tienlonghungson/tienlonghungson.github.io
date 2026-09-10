@@ -14,7 +14,7 @@ authors:
     - Romina Nobahari
 arxiv_url: 'https://arxiv.org/abs/2506.08673'
 comments: ""
-personal_comments: ""
+personal_comments: "My first work with my Ph.D. advisor, cheers !!!"
 talks_by_coauthors:
   "Slide by Kushagra @ COLT 2026": "/files/slidesbycoauthors/COLT 2026 slides.pdf"
   "Recording Kushagra @ COLT 2026": "https://www.youtube.com/watch?v=kvJ2unCwtHA&t=890s"
