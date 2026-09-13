@@ -5,7 +5,7 @@ category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2026-04-20
 venue: '53rd EATCS International Colloquium on Automata, Languages, and Programming, ICALP 2026'
-paperurl: ''
+paperurl: 'https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2026.49'
 authors:
     - Amir Carmel
     - Debarati Das
