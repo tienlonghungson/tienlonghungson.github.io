@@ -1,0 +1,37 @@
+{% assign talk = include.talk %}
+
+{% if talk.venues and talk.venues.size > 0 %}
+  <details class="talk-venues">
+    <summary class="btn">Venues</summary>
+    <ul>
+      {% for venue in talk.venues %}
+        <li>
+          {% if venue.place %}{{ venue.place }}{% endif %}
+          {% if venue.time %}{% if venue.place %}, {% endif %}{{ venue.time }}{% endif %}
+          {% if venue.slides %}
+            {% if venue.slides contains '://' %}
+              <a href="{{ venue.slides }}" target="_blank" rel="noopener noreferrer">[Slides]</a>
+            {% else %}
+              {% assign venue_slides_url = venue.slides | replace: ' ', '%20' %}
+              <a href="{{ site.baseurl }}{{ venue_slides_url }}">[Slides]</a>
+            {% endif %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </details>
+{% elsif talk.venue %}
+  <details class="talk-venues">
+    <summary class="btn">Venues</summary>
+    <ul>
+      <li>
+        {% if talk.venue %}{{ talk.venue }}{% endif %}
+        {% if talk.date %}{% if talk.venue %}, {% endif %}{{ talk.date | date: "%B %d, %Y" }}{% endif %}
+        {% if talk.slidesurl %}
+          {% assign legacy_slides_url = talk.slidesurl | replace: ' ', '%20' %}
+          <a href="{{ site.baseurl }}{{ legacy_slides_url }}">[Slides]</a>
+        {% endif %}
+      </li>
+    </ul>
+  </details>
+{% endif %}

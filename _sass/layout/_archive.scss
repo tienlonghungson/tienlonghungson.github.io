@@ -84,6 +84,34 @@
   }
 }
 
+.talk-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.talk-venues {
+  position: relative;
+
+  &[open] ul {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 0.5em);
+    left: 0;
+    min-width: max-content;
+    margin: 0;
+    padding: 0.75em 1em 0.75em 2em;
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-border-color);
+    box-shadow: 0 3px 8px rgba(#000, 0.15);
+  }
+}
+
+.talk-slides {
+  margin: 0;
+}
+
 
 /*
    List view

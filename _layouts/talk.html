@@ -42,6 +42,19 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+        <div class="talk-actions">
+          {% include talk-venues.html talk=page %}
+          {% if page.slides %}
+            <p class="talk-slides">
+              {% if page.slides contains '://' %}
+                <a href="{{ page.slides }}" class="btn" target="_blank" rel="noopener noreferrer">Slides</a>
+              {% else %}
+                {% assign page_slides_url = page.slides | replace: ' ', '%20' %}
+                <a href="{{ site.baseurl }}{{ page_slides_url }}" class="btn">Slides</a>
+              {% endif %}
+            </p>
+          {% endif %}
+        </div>
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

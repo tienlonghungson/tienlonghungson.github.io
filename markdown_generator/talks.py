@@ -49,6 +49,8 @@ def main(input_file, output_dir=None):
             location = row.get("location", "").strip()
             talk_url = row.get("talk_url", "").strip()
             description = row.get("description", "").strip()
+            general_slides = row.get("slides", "").strip()
+            venue_slides = row.get("venue_slides", "").strip()
 
             if not title or not url_slug or not date:
                 print("Skipping row: missing required field (title, url_slug, or date)", file=sys.stderr)
@@ -65,11 +67,18 @@ def main(input_file, output_dir=None):
             else:
                 md += 'type: "Talk"\n'
             md += "permalink: /talks/" + date + "-" + url_slug + "\n"
-            if venue:
-                md += 'venue: "' + venue + '"\n'
-            md += "date: " + date + "\n"
-            if location:
-                md += 'location: "' + location + '"\n'
+            if venue or location:
+                place = venue
+                if venue and location:
+                    place += ", "
+                place += location
+                md += "venues:\n"
+                md += '  - place: "' + place + '"\n'
+                md += '    time: "' + date + '"\n'
+                if venue_slides:
+                    md += '    slides: "' + venue_slides + '"\n'
+            if general_slides:
+                md += 'slides: "' + general_slides + '"\n'
             md += "---\n"
 
             if talk_url:

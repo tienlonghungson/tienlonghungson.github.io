@@ -35,8 +35,19 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+    {% if post.content %}<div class="archive__item-excerpt" itemprop="description">{{ post.content }}</div>{% endif %}
+    <div class="talk-actions">
+      {% include talk-venues.html talk=post %}
+      {% if post.slides %}
+        <p class="talk-slides">
+          {% if post.slides contains '://' %}
+            <a href="{{ post.slides }}" class="btn" target="_blank" rel="noopener noreferrer">Slides</a>
+          {% else %}
+            {% assign post_slides_url = post.slides | replace: ' ', '%20' %}
+            <a href="{{ site.baseurl }}{{ post_slides_url }}" class="btn">Slides</a>
+          {% endif %}
+        </p>
+      {% endif %}
+    </div>
   </article>
 </div>

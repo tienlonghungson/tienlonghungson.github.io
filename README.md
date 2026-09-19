@@ -34,6 +34,27 @@ talks_by_coauthors:
 
 The links appear alongside the paper and arXiv links when those fields are present.
 
+### Talk format
+
+Talk files in `_talks/` use YAML front matter for the title and optional slide links. The Markdown body is the talk content. Add one or more venues with an optional venue-specific slide link:
+
+```yaml
+---
+title: "Talk title"
+collection: talks
+permalink: /talks/talk-title
+venues:
+    - place: "Conference or institution, City"
+        time: "March 1, 2026"
+        slides: "/files/slides/talk-at-conference.pdf"
+slides: "/files/slides/talk.pdf"
+---
+
+Optional talk content goes here.
+```
+
+The talks page displays venues in a collapsible `Venues` control. The general `slides` link and each venue's `slides` link are shown only when provided.
+
 ## Running locally
 
 When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
